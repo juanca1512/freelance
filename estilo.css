@@ -1,5 +1,12 @@
+/* *Importamos las Fuentes del proyecto */
+
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+
+/* *Definimos Colores que usara el Proyecto ------------------------------------------------------------------------*/
 
 :root {
     --blanco: #ffffff;
@@ -29,14 +36,23 @@
     --header-height: 4rem;
 }
 
-/*--- GLOBALES---*/
+
+/* *--- GLOBALES---!!*/
+
 
 *{
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'M PLUS Rounded 1c';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body{
@@ -44,7 +60,12 @@ body{
     overflow-x: hidden;
 }
 
-/* SECCION I N I C I O */
+/* *-- Fin Globales del Proyecto --- */
+
+
+
+/* !SECCION I N I C I O */
+
 
 .inicio{
     background:linear-gradient(to right, #000c67, #007be5);
@@ -63,6 +84,7 @@ body{
     padding: 30px 0;
     align-items: center;
 }
+
 #inicio header nav a{
     color: #fff;
     text-decoration: none;
@@ -80,7 +102,12 @@ body{
     display: inline-block;
     margin: 0 10px;
 }
+
 .inicio .redes a:hover{
+    color: #ff5b00;
+}
+
+.redes a:hover{
     color: #ff5b00;
 }
 .inicio .fila{
@@ -122,7 +149,7 @@ body{
     transform: scale(1.1);
 }
 
-/* - ICONO MENU RESPONSIVE --*/
+/* * ICONO MENU RESPONSIVE --*/
 
 #icono-nav{
     height: 30px;
@@ -141,34 +168,36 @@ body{
     filter:drop-shadow(0em 30px 20px #9bd2f4);
 }
 
-/* SECCION S E R V I C I O S */
+/* !!-- FIN INICIO DEL PROYECTO --!! */
+
+
+
+/* ?--- S E C C I O N   S E R V I C I O S --- */
 
 .servicios{
-    width: 100%;
+    max-width: 1100px;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 20px;
     position: relative;
-    top: -65px;
+    top: -170px;
     z-index: 10;
 }
-.servicios .fila {
+.servicios .fila{
     display: flex;
-    gap: 15px;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
-.servicios .fila .col {
+.servicios .fila .col{
     text-align: center;
-    padding-inline: 5px;
-    width: 90%;
+    width: 30%;
 }
 
 .servicios .fila .col .card{
     border: 1px solid #8d8d8d;
-    height: 365px;
+    height: 400px;
     background-color: #fff;
-    padding: 10px;
+    padding: 30px;
     border-radius: 20px;
     position: relative;
 }
@@ -207,7 +236,7 @@ body{
 }
 .servicios .card p{
     color: #8d8d8d;
-    line-height: 15px;
+    line-height: 28px;
     font-size: 14px;
 }
 .servicios .card a{
@@ -219,47 +248,8 @@ body{
     transform: translateX(-50%);
 }
 
-/* Estilo para dispositivos móviles (ancho menor a 768px) */
+/* *--- S E C C I O N   H A B I L I A D E S ---*/
 
-.fila {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Espacio entre las filas */
-}
-
-/* Ajustar para dispositivos de pantalla pequeña, como tabletas */
-@media (max-width: 768px) {
-    .servicios {
-        width: 100%;
-        display: flex;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila en dispositivos móviles */
-        flex-wrap: wrap;
-    }
-}
-
-
-
-
-/* Ajustar para dispositivos de pantalla muy pequeña, como móviles */
-
-@media (max-width: 320px) {
-    .servicios {
-        width: 150%;
-        padding: 5px;
-        display: flex;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila en dispositivos móviles */
-        flex-wrap: wrap;
-        overflow:auto
-    }
-
-    .servicios .fila {
-        justify-content: space-between;
-        margin-bottom: 5 px;
-    }
-    
-}
-
-/* seccion HABILIDADES */
 
 .habilidades {
     background:linear-gradient(to right, #000c76, #007be5);
@@ -275,11 +265,10 @@ body{
     text-align: center;
 }
 .habilidades .contenedor-habi{
-    max-width: 45%;
+    max-width: 1100px;
     margin: auto;
 }
 .habilidades .fila{
-    margin-top: 35px;
     display: flex;
     justify-content: space-around;
 }
@@ -291,7 +280,7 @@ body{
     width: 100%;
 }
 
-/*---TEXTO TITULOS HABILIDADES --*/
+/* ?--TEXTO TITULOS HABILIDADES --*/
 
 .score .box h2{
     font-size: 20px;
@@ -300,15 +289,6 @@ body{
     text-align: center;
     color: #fff;
 
-}
-
-@media (max-width: 480px) {
-    .score .box h2 {
-        font-size: 20px;
-        margin-left: -2rem;
-        margin-top: -1rem;
-        color: #fff;
-    }
 }
 
 .score .box .chart{
@@ -321,7 +301,14 @@ body{
     text-align: center;
 }
 
-/*-- ICONO VERDE --*/
+/* Esta clase se genera dinámicamente por la librera para graficos */
+.score .box canvas {
+    position:absolute;
+    top: 0 ;
+    left: 0 ;
+}
+
+/* ?--ICONO VERDE --*/
 
 .iconos {
     width: 71px; /* Ajusta el ancho según tus necesidades */
@@ -340,66 +327,17 @@ body{
     transform: translateY(-50%); /* Centra verticalmente la imagen */
 }
 
-/* Estilos para pantallas más pequeñas (responsive) */
 
-@media screen and (max-width: 768px) {
-    .habilidades {
-      flex-direction: column; /* Cambiar a dirección de columna para centrar */
-      margin-left: 0px; /* Centrar los elementos verticalmente */
-      margin-bottom: 0; /* Eliminar el espacio entre filas */
-    }
-  
-    .col {
-      width: 100%; /* Ocupar todo el ancho disponible */
-      text-align: center; /* Centrar el contenido horizontalmente */
-      
-    }
-  
-    .fila > .col {
-      flex-basis: 50%; /* Las dos primeras habilidades ocuparán el 50% del ancho cada una */
-      flex-basis: 100%; /* Cada habilidad ocupará el 100% del ancho */
-    margin-bottom: 20px; /* Agregar espacio entre las habilidades */
-    }
-  }
 
-  @media (max-width: 768px) { /* Cambia el ancho máximo según tus necesidades */
-    .habilidades .col {
-        display: flex;
-        flex-wrap: wrap; /* Ajusta el valor según tu preferencia */
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .iconos {
-        width: 71px; /* Ajusta el ancho según tus necesidades */
-        height: 123px; /* Ajusta la altura según tus necesidades */
-        background-image: url('img/cheque.png'); 
-        background-repeat: no-repeat;/* Ruta de tu imagen de iconos */
-        background-size: 100%; /* Ajusta el tamaño de la imagen para llenar el contenedor */
-        background-repeat: no-repeat;/* Evita que se repita la imagen */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto; /* Centra horizontalmente la imagen */
-        position: relative; /* Establece una posición relativa */
-        top: 55%;
-        margin-left: 20px; /* Mueve la imagen hacia abajo */
-        transform: translateY(-50%);  /*Eliminar el espacio entre filas */
-    }
-}
+/* *--- F I N  S E C C I O N   H A B I L I A D E S ---*/
 
-/* Esta clase se genera dinámicamente por la librera para graficos */
-.score .box canvas {
-    position:absolute;
-    top: 0 ;
-    left: 0 ;
-}
 
-/* SECCION T R A B A J O S */
+/* !-- S E S C C I O N   T R A B A J O S --*/
 
 .trabajos{
-    max-width: 100%;
-    -moz-backface-visibility: auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 0 20px;
 }
 .trabajos h2{
@@ -423,7 +361,7 @@ body{
     border: 3px solid #ff5b00;
 }
 
-/* Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
+/* ?Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
 .borde{
     border: 3px solid #ff5b00 !important;  
 }
@@ -435,9 +373,11 @@ body{
 }
 .trabajos .galeria{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,16rem),1fr)); /* Tres columnas por fila */
     grid-gap:30px;
 }
+
 .trabajos .galeria .item{
     position: relative;
     overflow: hidden;
@@ -479,19 +419,12 @@ body{
     top: 0;
 }
 
-/* Estilos para pantallas más pequeñas (responsive) */
 
-@media screen and (max-width: 768px) {
-    .trabajos {
-        padding: 15px; /* Ajusta el espaciado en dispositivos móviles según tus preferencias */
-    }
+/* !-- F I N  S E C C I O N   T R A B A J O S --*/
 
-    .trabajos .galeria {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila en dispositivos móviles */
-    }
-}
 
-/* SECCIÓN C O N T A C T O */
+/* *-- S E C C I Ó N   C O N T A C T O --- */
+
 .contacto{
     background:
         linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.8)),
@@ -542,8 +475,20 @@ body{
     background: linear-gradient(to right, #ff5b00, #ff9900);
 }
 
-/* SECCION footer nuevo */
+/* *-- F I N  S E C C I Ó N   C O N T A C T O --- */
 
+
+/* !-- S E C C I O N  F O O T E R --- */
+
+.footer{
+    background-color: #0a141d;
+    color: #fff;
+    padding: 7px 0;
+    margin-top: 20px;
+    margin-bottom: -4px;
+    font-size: 14px;
+    text-align: center;
+}
 .pie-pagina{
     width: 100%;
     background-color: #0a141d;
@@ -555,10 +500,11 @@ body{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap:50px;
+    margin-top: 35px;
     padding: 45px 0px;
 }
 .pie-pagina .grupo-1 .box figure {
-    width: 100%;
+    width: 55%;
     height: auto; /* Cambiado a auto para mantener la proporción de la imagen */
     display: flex;
     justify-content: flex-start;
@@ -569,7 +515,7 @@ body{
     max-width: 100%; /* Cambiado a max-width */
     height: auto; /* Cambiado a auto para mantener la proporción de la imagen */
     margin-bottom: 10px;
-    margin-left: 40px; /* Espacio entre la imagen y los párrafos */
+    margin-left: 10px; /* Espacio entre la imagen y los párrafos */
 }
 
 /* ... (otras partes del código) ... */
@@ -611,12 +557,13 @@ body{
     color: white;
     border: none;
     padding: 10px 20px;
+    width: 93%;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .pie-pagina .grupo-1 .box button:hover {
-    background-color: darkred;
+    background-color: rgb(21, 32, 186);
 }
 
 /* ... (otras partes del código) ... */
@@ -656,12 +603,13 @@ body{
 .pie-pagina .grupo-1 .box .redes-sociales a {
     display: inline-block;
     text-decoration: none;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     line-height: 45px;
     color: #fff;
     margin-right: 10px;
-    background-color: #0d2033;
+    background-color: #8663e7;
+    border-radius: 10%;
     text-align: center;
     transition: all 300ms ease;
 }
@@ -681,156 +629,9 @@ body{
     font-size: 15px;
 }
 
-@media screen and (max-width:768px){
-    .pie-pagina .grupo-2{
-        background-color: #528ac1;
-        padding: 15px 10px;
-        text-align: center;
-        color: #fff;
-        margin-bottom: -20px;
-        margin-top: 25px;
-    }
-}
-@media screen and (max-width:768px){
-    .pie-pagina .grupo-1 .box figure img {
-        padding: 25px 10px;
-        color: #fff;
-        font-size: 35px;
-        text-align: center;
-        margin-top: 25px;
-        margin-left: 53PX;
-    }
-}
 
-@media screen and (max-width:720px){
-    .pie-pagina .grupo-1 .box figure img {
-        padding: 10px 100px;
-        color: #fff;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        margin-left: 2PX;
-    
-    }
-
-    .pie-pagina .grupo-2 small {
-        padding: 48px 10px;
-        color: #fff;
-        font-size: 22px;
-        text-align: center;
-        margin-top: 15px;
-        margin-left: 53PX;
-      }
-
-}
-
-@media screen and (max-width:768px){
-    .pie-pagina .grupo-1{
-        width: 60%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 10px 15px;
-    }
-}
-
-footer{
-    background-color: #0a141d;
-    color: #fff;
-    padding: 7px 0;
-    margin-top: 20px;
-    margin-bottom: -4px;
-    font-size: 14px;
-    text-align: center;
-}
-
-/* SECCION RESPONSIVE */
-@media screen and (max-width:1180px){
-    .inicio{
-        clip-path: none;
-    }
-}
-@media screen and (max-width:800px){
-    .redes{
-        display: none;
-    }
-    #nav{
-        display: none;
-    }
-    #nav.responsive{
-        background-color: rgba(0,0,0,.9);
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        position: absolute;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 99;
-    }
-    #nav.responsive a{
-        font-size: 30px;
-    }
-    #icono-nav{
-        display: block;
-    }
-
-    .inicio{
-        height: auto;
-    }
-    .inicio .fila{
-        display: block;
-    }
-    .inicio .fila .col{
-        width: 100%;
-        text-align: center;
-    }
-    .inicio .fila .col h2{
-        margin-top: 20px;
-    }
-    .inicio .fila .col .contenedor-img{
-        width: 50%;
-        margin-top: 30px;
-    }
-/*
-    .servicios{
-        position: static;
-        padding: 20px;
-    }
-    .servicios .fila{
-        display: block;
-        margin-bottom: 0;
-    }
-    .servicios .fila .col{
-        width: 70%;
-        margin: auto;
-    }
-    .servicios .fila .col .card{
-        margin-bottom: 20px;
-    }*/
-
-    /*
-    .habilidades{
-        position: static;
-    }
-*/
+/* !-- F I N  S E C C I O N  F O O T E R --- */
 
 
-    .trabajos nav a{
-        margin: 0 5px;
-    }
 
-    .contacto .fila{
-        display:  block !important;
-    }
-    .contacto .fila .col{
-        text-align: center;
-        width: 100% !important;
-    }
-    .contacto .fila .col .info{
-        float: left;
-        font-size: 12px;
-        width: 25%;
-    }
-}
+

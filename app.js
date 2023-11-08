@@ -19,9 +19,9 @@ header.innerHTML = `
     </div>
 
     <div class="redes">
-        <a href="#"><i class="fa-brands fa-facebook fa-xl" style="color: #00deef;"></i></a>
-        <a href="#"><i class="fa-brands fa-square-instagram fa-xl" style="color: #00deef;"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube fa-xl" style="color: #00deef;"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook fa-xl" style="color: #fff;"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram fa-xl" style="color: #fff;"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube fa-xl" style="color: #fff;"></i></a>
     </div>
 `;
 
